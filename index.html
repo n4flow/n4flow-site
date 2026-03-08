@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>n4flow — Automação, Dados e IA para Empresas</title>
+<meta name="description" content="Reduzimos trabalho manual, organizamos dados e implantamos IA prática para empresas que querem crescer com mais controle e velocidade.">
+<meta property="og:title" content="n4flow — Automação, Dados e IA para Empresas">
+<meta property="og:description" content="Automatizamos processos, organizamos dados e implantamos IA prática para operação e gestão.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://n4flow.com.br">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://n4flow.com.br">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"n4flow","url":"https://n4flow.com.br","description":"Automação, dados e IA aplicados ao que trava o crescimento da sua empresa.","foundingDate":"2026","founders":[{"@type":"Person","name":"Antonio Bennati"},{"@type":"Person","name":"Kellyn"}],"address":{"@type":"PostalAddress","addressLocality":"São Paulo","addressRegion":"SP","addressCountry":"BR"},"areaServed":"BR","sameAs":["https://www.linkedin.com/company/n4flow","https://www.youtube.com/@thebilab"]}
+</script>
+<style>
+:root{--orange:#F07B2B;--orange-light:#F59D5E;--orange-glow:rgba(240,123,43,.15);--orange-glow2:rgba(240,123,43,.08);--dark:#2D2D2D;--darker:#1A1A1A;--charcoal:#3D3D3D;--g700:#4A4A4A;--g500:#7A7A7A;--g400:#999;--g200:#E0E0E0;--g100:#F3F3F3;--white:#FAFAFA;--pw:#FFF;--font:'Plus Jakarta Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font);color:var(--dark);background:var(--pw);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:.8}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.fade-up{animation:fadeUp .8s ease-out forwards;opacity:0}
+.fade-up-d1{animation-delay:.1s}.fade-up-d2{animation-delay:.2s}.fade-up-d3{animation-delay:.3s}.fade-up-d4{animation-delay:.4s}
+.reveal{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.04);transition:all .3s}
+.nav-logo{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;text-decoration:none}
+.nav-logo .n4{color:var(--orange)}.nav-logo .flow{color:var(--charcoal)}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-links a{text-decoration:none;font-size:.88rem;font-weight:500;color:var(--g500);transition:color .2s}
+.nav-links a:hover{color:var(--dark)}
+.nav-cta{display:inline-flex;align-items:center;gap:.5rem;padding:.6rem 1.4rem;background:var(--orange);color:#fff;font-size:.85rem;font-weight:600;border-radius:8px;text-decoration:none;transition:all .25s;border:none;cursor:pointer}
+.nav-cta:hover{background:#D96A1F;transform:translateY(-1px);box-shadow:0 4px 20px rgba(240,123,43,.3)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--dark);transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:60px;left:0;right:0;background:var(--pw);padding:1.5rem 2rem;border-bottom:1px solid rgba(0,0,0,.06);flex-direction:column;gap:1.2rem;z-index:99;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{text-decoration:none;font-size:1rem;font-weight:500;color:var(--dark);padding:.5rem 0}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;right:-20%;width:800px;height:800px;background:radial-gradient(circle,var(--orange-glow2) 0%,transparent 70%);border-radius:50%;pointer-events:none;animation:pulse 6s ease-in-out infinite}
+.hero::after{content:'';position:absolute;bottom:-20%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(240,123,43,.04) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;background:var(--orange-glow);border:1px solid rgba(240,123,43,.2);border-radius:100px;font-size:.8rem;font-weight:600;color:var(--orange);margin-bottom:2rem}
+.hero-badge::before{content:'';width:6px;height:6px;background:var(--orange);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+.hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:800;line-height:1.1;letter-spacing:-.04em;color:var(--darker);max-width:800px;margin-bottom:1.5rem}
+.hero h1 .accent{color:var(--orange)}
+.hero-sub{font-size:clamp(1rem,2vw,1.15rem);line-height:1.7;color:var(--g500);max-width:560px;margin-bottom:2.5rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;background:var(--orange);color:#fff;font-size:.95rem;font-weight:600;border-radius:10px;text-decoration:none;transition:all .3s;border:none;cursor:pointer;font-family:var(--font)}
+.btn-primary:hover{background:#D96A1F;transform:translateY(-2px);box-shadow:0 8px 30px rgba(240,123,43,.35)}
+.btn-primary svg{width:18px;height:18px}
+.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2rem;background:transparent;color:var(--dark);font-size:.95rem;font-weight:600;border-radius:10px;text-decoration:none;border:1.5px solid var(--g200);transition:all .3s;cursor:pointer;font-family:var(--font)}
+.btn-secondary:hover{border-color:var(--orange);color:var(--orange);transform:translateY(-2px)}
+
+/* TRUST BAR */
+.trust-bar{padding:2rem;text-align:center;border-bottom:1px solid rgba(0,0,0,.04)}
+.trust-bar p{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--g400);margin-bottom:1rem}
+.trust-items{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;align-items:center}
+.trust-item{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--g500);font-weight:500}
+.trust-item svg{width:18px;height:18px;color:var(--orange)}
+
+/* SECTIONS */
+section{padding:6rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-label{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.75rem;font-weight:500;color:var(--orange);text-transform:uppercase;letter-spacing:.15em;margin-bottom:1rem}
+.section-label::before{content:'';width:20px;height:1.5px;background:var(--orange)}
+.section-title{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;color:var(--darker);margin-bottom:1rem}
+.section-desc{font-size:1.05rem;color:var(--g500);line-height:1.7;max-width:600px;margin-bottom:3rem}
+
+/* PAIN POINTS */
+.pain-section{background:var(--g100);border-top:1px solid rgba(0,0,0,.04);border-bottom:1px solid rgba(0,0,0,.04)}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem;margin-top:2rem}
+.pain-card{display:flex;align-items:flex-start;gap:1rem;padding:1.4rem 1.6rem;background:var(--pw);border-radius:12px;border:1px solid rgba(0,0,0,.06);transition:all .3s}
+.pain-card:hover{border-color:rgba(240,123,43,.2);box-shadow:0 4px 20px rgba(0,0,0,.04);transform:translateY(-2px)}
+.pain-icon{flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--orange-glow);border-radius:10px;color:var(--orange)}
+.pain-icon svg{width:20px;height:20px}
+.pain-card p{font-size:.92rem;color:var(--g700);line-height:1.55;font-weight:500}
+
+/* PILLARS */
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.pillar-card{padding:2.5rem 2rem;border-radius:16px;border:1px solid rgba(0,0,0,.06);background:var(--pw);transition:all .4s;position:relative;overflow:hidden}
+.pillar-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.pillar-card:hover::before{transform:scaleX(1)}
+.pillar-card:hover{border-color:rgba(240,123,43,.15);box-shadow:0 12px 40px rgba(0,0,0,.06);transform:translateY(-4px)}
+.pillar-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--orange-glow),rgba(240,123,43,.05));border-radius:14px;margin-bottom:1.2rem;color:var(--orange)}
+.pillar-icon svg{width:28px;height:28px}
+.pillar-num{font-family:var(--mono);font-size:.7rem;font-weight:500;color:var(--orange);letter-spacing:.1em;margin-bottom:.8rem;text-transform:uppercase}
+.pillar-card h3{font-size:1.3rem;font-weight:700;color:var(--darker);margin-bottom:.8rem;letter-spacing:-.02em}
+.pillar-card>p{font-size:.9rem;color:var(--g500);line-height:1.65}
+.pillar-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.2rem}
+.pillar-tag{font-family:var(--mono);font-size:.7rem;padding:.3rem .7rem;background:var(--g100);color:var(--g500);border-radius:6px}
+
+/* PROCESS */
+.process-section{background:var(--darker);color:#fff}
+.process-section .section-title{color:#fff}
+.process-section .section-desc{color:rgba(255,255,255,.5)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.process-step{padding:2.5rem 2rem;position:relative;border-right:1px solid rgba(255,255,255,.06)}
+.process-step:last-child{border-right:none}
+.step-num{font-family:var(--mono);font-size:2.5rem;font-weight:500;color:var(--orange);opacity:.3;margin-bottom:1rem;line-height:1}
+.process-step h3{font-size:1.2rem;font-weight:700;margin-bottom:.7rem;color:#fff}
+.process-step p{font-size:.88rem;color:rgba(255,255,255,.45);line-height:1.65}
+.step-arrow{position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--orange);opacity:.4;font-size:1.2rem}
+
+/* RESULTS */
+.results-section{background:linear-gradient(180deg,var(--pw) 0%,var(--g100) 100%)}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.result-item{padding:1.5rem}
+.result-value{font-size:2.2rem;font-weight:800;color:var(--orange);letter-spacing:-.03em;line-height:1}
+.result-label{font-size:.82rem;color:var(--g500);margin-top:.5rem;line-height:1.5}
+
+/* CASES */
+.cases-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.case-card{padding:2.5rem;border-radius:16px;background:var(--g100);border:1px solid rgba(0,0,0,.04);transition:all .3s;position:relative;overflow:hidden}
+.case-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,.06)}
+.case-industry{font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--orange);margin-bottom:1rem}
+.case-card h3{font-size:1.15rem;font-weight:700;color:var(--darker);margin-bottom:.7rem}
+.case-card>p{font-size:.88rem;color:var(--g500);line-height:1.65;margin-bottom:1.2rem}
+.case-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.case-tag{font-family:var(--mono);font-size:.68rem;padding:.25rem .6rem;background:var(--pw);border:1px solid rgba(0,0,0,.08);border-radius:5px;color:var(--g500)}
+
+/* TEAM */
+.team-section{background:var(--pw)}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.team-card{display:flex;gap:1.5rem;padding:2rem;border-radius:16px;border:1px solid rgba(0,0,0,.06);background:var(--pw);transition:all .3s}
+.team-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.05);transform:translateY(-2px)}
+.team-photo{width:100px;height:100px;border-radius:14px;overflow:hidden;flex-shrink:0;position:relative;background:linear-gradient(135deg,var(--orange),var(--orange-light))}
+.team-photo-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:1.8rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+/* INSTRUÇÃO: Para colocar foto real, substitua o div .team-photo-placeholder por:
+   <img src="foto-antonio.jpg" alt="Antonio Bennati" style="width:100%;height:100%;object-fit:cover"> 
+   Tamanho ideal da foto: 400x400px, formato JPG ou WebP */
+.team-info h3{font-size:1.15rem;font-weight:700;color:var(--darker);margin-bottom:.2rem}
+.team-role{font-family:var(--mono);font-size:.75rem;color:var(--orange);margin-bottom:.7rem}
+.team-bio{font-size:.85rem;color:var(--g500);line-height:1.6}
+.team-links{display:flex;gap:.5rem;margin-top:.8rem}
+.team-link{font-family:var(--mono);font-size:.68rem;padding:.3rem .6rem;background:var(--g100);border:1px solid rgba(0,0,0,.06);border-radius:5px;color:var(--g500);text-decoration:none;transition:all .2s}
+.team-link:hover{border-color:var(--orange);color:var(--orange)}
+
+/* CTA FINAL */
+.cta-section{background:var(--darker);text-align:center;padding:5rem 2rem;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(240,123,43,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.cta-section .section-title{color:#fff;margin-bottom:.8rem}
+.cta-sub{font-size:1.05rem;color:rgba(255,255,255,.45);max-width:500px;margin:0 auto 2.5rem;line-height:1.7}
+.cta-section .btn-primary{padding:1rem 2.5rem;font-size:1rem;position:relative;z-index:2}
+.cta-note{margin-top:1.5rem;font-size:.78rem;color:rgba(255,255,255,.25);font-family:var(--mono)}
+
+/* FOOTER */
+footer{background:var(--darker);border-top:1px solid rgba(255,255,255,.05);padding:2.5rem 2rem}
+.footer-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.footer-left .nav-logo{font-size:1.1rem;margin-bottom:.5rem;display:inline-block}
+.footer-left .nav-logo .flow{color:rgba(255,255,255,.4)}
+.footer-left p{font-size:.75rem;color:rgba(255,255,255,.2);font-family:var(--mono);margin-top:.3rem;line-height:1.6}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-family:var(--mono);font-size:.72rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--orange)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.nav-links{display:none}
+.hamburger{display:flex}
+.pillars-grid,.process-steps,.results-grid,.cases-grid,.team-grid{grid-template-columns:1fr}
+.process-step{border-right:none;border-bottom:1px solid rgba(255,255,255,.06)}
+.process-step:last-child{border-bottom:none}
+.step-arrow{display:none}
+.pain-grid{grid-template-columns:1fr}
+.hero{padding:6rem 1.5rem 3rem}
+section{padding:4rem 1.2rem}
+nav{padding:.8rem 1.2rem}
+.footer-content{grid-template-columns:1fr;text-align:center}
+.footer-links{justify-content:center}
+.team-card{flex-direction:column;align-items:center;text-align:center}
+.team-links{justify-content:center}
+.results-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo"><span class="n4">n4</span><span class="flow">flow</span></a>
+  <div class="nav-links">
+    <a href="#solucoes">Soluções</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#equipe">Equipe</a>
+    <a href="https://thebilab.com/blog" target="_blank">Blog</a>
+    <a href="/diagnostico/" class="nav-cta">Agendar diagnóstico →</a>
+  </div>
+  <button class="hamburger" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#solucoes" onclick="document.getElementById('mobile-menu').classList.remove('open')">Soluções</a>
+  <a href="#resultados" onclick="document.getElementById('mobile-menu').classList.remove('open')">Resultados</a>
+  <a href="#equipe" onclick="document.getElementById('mobile-menu').classList.remove('open')">Equipe</a>
+  <a href="https://thebilab.com/blog" target="_blank">Blog — TheBILab</a>
+  <a href="/diagnostico/" style="color:var(--orange);font-weight:700">Agendar diagnóstico →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge fade-up">Automação · Dados · IA</div>
+  <h1 class="fade-up fade-up-d1">Menos trabalho manual.<br>Mais <span class="accent">clareza</span> para decidir.</h1>
+  <p class="hero-sub fade-up fade-up-d2">Automatizamos processos, organizamos dados e implantamos IA prática para empresas que querem crescer com mais controle e velocidade.</p>
+  <div class="hero-actions fade-up fade-up-d3">
+    <a href="/diagnostico/" class="btn-primary">Diagnóstico gratuito <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <a href="#solucoes" class="btn-secondary">Como funciona</a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar fade-up fade-up-d4">
+  <p>Expertise comprovada em</p>
+  <div class="trust-items">
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> Inteligência de Dados</div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> Automação de Processos</div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> IA Aplicada ao Negócio</div>
+    <div class="trust-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> +5.000 profissionais no canal</div>
+  </div>
+</div>
+
+<!-- PAIN POINTS -->
+<section class="pain-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Sua empresa vive isso?</span>
+      <h2 class="section-title">Os sinais de que algo precisa mudar</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <p>Seu time perde horas em tarefas repetitivas que poderiam rodar sozinhas.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 3 5 5-5 5"/><path d="M21 8H9"/><path d="m8 21-5-5 5-5"/><path d="M3 16h12"/></svg></div>
+        <p>Dados espalhados em várias ferramentas que não conversam entre si.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+        <p>Relatórios demorados e manuais que atrasam decisões importantes.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <p>Falta de visibilidade para gestores acompanharem a operação em tempo real.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg></div>
+        <p>Atendimento e comunicação que não acompanham o crescimento do negócio.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <p>Dependência excessiva de pessoas específicas para obter respostas simples.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section id="solucoes">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Onde atuamos</span>
+      <h2 class="section-title">Três frentes. Uma empresa.</h2>
+      <p class="section-desc">Cada empresa tem uma dor mais urgente. Começamos por ela e evoluímos conforme a maturidade do negócio.</p>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="pillar-num">01 — Process</div>
+        <h3>Operação sem retrabalho</h3>
+        <p>Automatizamos processos internos, aprovações, rotinas de backoffice e tarefas repetitivas para liberar o time do trabalho que não gera valor.</p>
+        <div class="pillar-tags"><span class="pillar-tag">Workflows</span><span class="pillar-tag">Integrações</span><span class="pillar-tag">CRM</span><span class="pillar-tag">n8n</span></div>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
+        <div class="pillar-num">02 — Data</div>
+        <h3>Dados para decidir</h3>
+        <p>Conectamos fontes, organizamos indicadores e criamos inteligência real para que líderes tomem decisões com base em dados confiáveis.</p>
+        <div class="pillar-tags"><span class="pillar-tag">BI</span><span class="pillar-tag">Dashboards</span><span class="pillar-tag">Alertas</span><span class="pillar-tag">KPIs</span></div>
+      </div>
+      <div class="pillar-card reveal">
+        <div class="pillar-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
+        <div class="pillar-num">03 — Intelligence</div>
+        <h3>IA para trabalhar com você</h3>
+        <p>Implantamos copilotos e interfaces conversacionais com IA sobre dados, documentos e contexto do negócio para facilitar o trabalho e acelerar decisões.</p>
+        <div class="pillar-tags"><span class="pillar-tag">Copilotos</span><span class="pillar-tag">RAG</span><span class="pillar-tag">Agentes</span><span class="pillar-tag">LLM</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-section">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Como funciona</span>
+      <h2 class="section-title">Comece pelo que mais dói hoje</h2>
+      <p class="section-desc">Você não precisa resolver tudo de uma vez. Entramos por uma dor, entregamos valor rápido e evoluímos juntos.</p>
+    </div>
+    <div class="process-steps reveal">
+      <div class="process-step"><div class="step-num">01</div><h3>Diagnóstico</h3><p>Entendemos sua operação, mapeamos gargalos e priorizamos onde automação, dados e IA vão gerar mais impacto primeiro.</p><span class="step-arrow">→</span></div>
+      <div class="process-step"><div class="step-num">02</div><h3>Implantação</h3><p>Colocamos a solução para funcionar com integrações, fluxos, dashboards e IA. Entrega rápida, com valor tangível nas primeiras semanas.</p><span class="step-arrow">→</span></div>
+      <div class="process-step"><div class="step-num">03</div><h3>Evolução contínua</h3><p>Acompanhamos, melhoramos e expandimos. Novas automações, mais inteligência, mais áreas. O projeto cresce com o negócio.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS (abstract social proof) -->
+<section class="results-section" id="resultados">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Por que a n4flow</span>
+      <h2 class="section-title">Experiência que gera resultado</h2>
+    </div>
+    <div class="results-grid reveal">
+      <div class="result-item">
+        <div class="result-value">R$15k–80k</div>
+        <div class="result-label">Faixa de projetos<br>de implantação</div>
+      </div>
+      <div class="result-item">
+        <div class="result-value">2–4 sem</div>
+        <div class="result-label">Para primeiros<br>resultados tangíveis</div>
+      </div>
+      <div class="result-item">
+        <div class="result-value">5.000+</div>
+        <div class="result-label">Profissionais no canal<br>TheBILab</div>
+      </div>
+      <div class="result-item">
+        <div class="result-value">100%</div>
+        <div class="result-label">Remoto e atuação<br>em todo o Brasil</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section>
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Na prática</span>
+      <h2 class="section-title">Problemas reais que resolvemos</h2>
+      <p class="section-desc">Cada projeto começa pela dor mais urgente do cliente e evolui para transformar toda a operação.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card reveal">
+        <div class="case-industry">Engenharia & Construção</div>
+        <h3>Visão integrada para gestão de obras</h3>
+        <p>Empresa com dados de acompanhamento de obras espalhados em múltiplas ferramentas. A liderança não conseguia identificar atrasos, custos e pontos críticos sem depender de relatórios manuais que demoravam dias.</p>
+        <div class="case-tags"><span class="case-tag">Integração de dados</span><span class="case-tag">Dashboards</span><span class="case-tag">Alertas automáticos</span><span class="case-tag">Smartsheet</span></div>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-industry">Mídia & Conteúdo Digital</div>
+        <h3>Inteligência editorial com IA</h3>
+        <p>Portal de conteúdo que precisava unificar dados de produção e performance para gerar inteligência que apoia os criadores a serem mais assertivos, incluindo estudos de mercado e dados externos via IA.</p>
+        <div class="case-tags"><span class="case-tag">IA aplicada</span><span class="case-tag">Dados editoriais</span><span class="case-tag">Performance</span><span class="case-tag">RAG</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section" id="equipe">
+  <div class="container">
+    <div class="reveal">
+      <span class="section-label">Quem está por trás</span>
+      <h2 class="section-title">Pessoas reais resolvendo problemas reais</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo">
+          <!-- TROCAR POR: <img src="foto-antonio.jpg" alt="Antonio Bennati" style="width:100%;height:100%;object-fit:cover"> -->
+          <!-- Tamanho ideal: 400x400px, JPG ou WebP -->
+          <div class="team-photo-placeholder">AB</div>
+        </div>
+        <div class="team-info">
+          <h3>Antonio Bennati</h3>
+          <div class="team-role">Fundador & Head de Soluções</div>
+          <p class="team-bio">Especialista em inteligência de dados, automação e IA aplicada. Criador do TheBILab, canal com +5.000 profissionais. Lidera diagnóstico, arquitetura de soluções e relacionamento com clientes.</p>
+          <div class="team-links">
+            <a href="https://www.youtube.com/@thebilab" target="_blank" class="team-link">YouTube</a>
+            <a href="#" class="team-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo" style="background:linear-gradient(135deg,#2D2D2D,#4A4A4A)">
+          <!-- TROCAR POR: <img src="foto-kellyn.jpg" alt="Kellyn" style="width:100%;height:100%;object-fit:cover"> -->
+          <!-- Tamanho ideal: 400x400px, JPG ou WebP -->
+          <div class="team-photo-placeholder">K</div>
+        </div>
+        <div class="team-info">
+          <h3>Kellyn</h3>
+          <div class="team-role">Co-fundadora & Operações</div>
+          <p class="team-bio">Responsável por operações, marketing e sucesso do cliente. Garante que cada projeto seja entregue com qualidade, no prazo e com comunicação clara do início ao fim.</p>
+          <div class="team-links">
+            <a href="#" class="team-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="container reveal">
+    <h2 class="section-title">Vamos começar pelo diagnóstico</h2>
+    <p class="cta-sub">30 minutos para entender sua operação, identificar gargalos e mostrar onde automação, dados e IA podem gerar resultado rápido. Sem compromisso.</p>
+    <a href="/diagnostico/" class="btn-primary">Agendar diagnóstico gratuito <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    <p class="cta-note">Gratuito · 30 minutos · Sem compromisso</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <a href="/" class="nav-logo"><span class="n4">n4</span><span class="flow">flow</span></a>
+      <p>Automação, dados e IA aplicados ao que trava o crescimento da sua empresa.</p>
+      <p>São Paulo, SP · Atendimento em todo o Brasil · contato@n4flow.com.br</p>
+    </div>
+    <div class="footer-links">
+      <a href="#solucoes">Soluções</a>
+      <a href="https://thebilab.com/blog" target="_blank">Blog</a>
+      <a href="https://www.youtube.com/@thebilab" target="_blank">YouTube</a>
+      <a href="#" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>o.observe(el));
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.boxShadow=window.scrollY>50?'0 4px 30px rgba(0,0,0,.06)':'none'});
+</script>
+</body>
+</html>

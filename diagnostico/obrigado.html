@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obrigado! — n4flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#F07B2B;--dark:#2D2D2D;--darker:#1A1A1A;--g500:#7A7A7A;--g100:#F3F3F3;--pw:#FFF;--font:'Plus Jakarta Sans',-apple-system,sans-serif;--mono:'DM Mono',monospace}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font);color:var(--dark);background:var(--pw);-webkit-font-smoothing:antialiased}
+
+nav{padding:1rem 2rem;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(0,0,0,.04)}
+.nav-logo{font-size:1.5rem;font-weight:800;letter-spacing:-.03em;text-decoration:none}
+.nav-logo .n4{color:var(--orange)}.nav-logo .flow{color:#3D3D3D}
+
+.success{min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem}
+.success-icon{width:80px;height:80px;background:rgba(240,123,43,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem}
+.success-icon svg{width:40px;height:40px;color:var(--orange)}
+.success h1{font-size:2rem;font-weight:800;color:var(--darker);margin-bottom:.8rem;letter-spacing:-.03em}
+.success h1 .accent{color:var(--orange)}
+.success p{font-size:1.05rem;color:var(--g500);line-height:1.7;max-width:480px;margin-bottom:1.5rem}
+.success .btn{display:inline-flex;align-items:center;gap:.5rem;padding:1rem 2.5rem;background:var(--orange);color:#fff;font-size:1rem;font-weight:700;border-radius:10px;text-decoration:none;transition:all .3s}
+.success .btn:hover{background:#D96A1F;transform:translateY(-2px);box-shadow:0 8px 30px rgba(240,123,43,.35)}
+.success .note{font-size:.82rem;color:var(--g500);margin-top:1.5rem;line-height:1.6;max-width:400px}
+.success .home-link{display:inline-block;margin-top:1rem;font-size:.85rem;color:var(--g500);text-decoration:none}
+.success .home-link:hover{color:var(--orange)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span class="n4">n4</span><span class="flow">flow</span></a>
+</nav>
+
+<div class="success">
+  <div class="success-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
+  <h1>Recebemos seu <span class="accent">diagnóstico!</span></h1>
+  <p>Agora é só agendar o melhor horário para conversar com o Antonio. A reunião dura 30 minutos e é por videoconferência.</p>
+
+  <!-- TROCAR PELO LINK REAL DO CALENDLY DE VOCÊS -->
+  <a href="https://calendly.com/SEU-LINK-AQUI/diagnostico" target="_blank" class="btn">
+    Escolher horário no Calendly
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+  </a>
+
+  <p class="note">Se preferir, envie um WhatsApp para combinar diretamente:<br><strong style="color:var(--dark)">(00) 00000-0000</strong></p>
+  <a href="/" class="home-link">← Voltar ao site da n4flow</a>
+</div>
+
+</body>
+</html>
